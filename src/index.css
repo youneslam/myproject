@@ -25,4 +25,17 @@ p {
   flex-direction: column;
   min-height: 100vh;
 }
-
+.items{
+  display: box;
+  width: 100%;
+  border:10px solid blue;
+  border-radius: 50px;
+  background-color: aqua;
+}
+.items button{
+  color: rgba(255, 0, 0, 0.623);
+  cursor: pointer;
+}
+.items button.hover{
+  color: beige;
+}
