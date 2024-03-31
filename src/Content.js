@@ -29,7 +29,7 @@ const Content = () => {
               checked={item.checked}
             />
             <label>{item.item}</label>
-            <button>delete</button>
+            <button>delete this item</button>
           </li>
         ))}
       </ul>
