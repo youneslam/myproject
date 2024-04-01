@@ -25,17 +25,36 @@ p {
   flex-direction: column;
   min-height: 100vh;
 }
-.items{
-  display: box;
-  width: 100%;
-  border:10px solid blue;
-  border-radius: 50px;
-  background-color: aqua;
-}
+
 .items button{
-  color: rgba(255, 0, 0, 0.623);
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .items button.hover{
-  color: beige;
+  background-color: lightblue;
 }
+.items .my-button-rounded {
+  background-color: lightblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.items .my-button-transition {
+  background-color: lightblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+/*i added a new file to ensure that this is working fine"
+
