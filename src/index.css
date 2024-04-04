@@ -1,7 +1,7 @@
 
 
 header, footer {
-  background-color: #007bff;
+  background-color:rgba(0, 0, 0, 0.54);
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -25,11 +25,30 @@ p {
   flex-direction: column;
   min-height: 100vh;
 }
+.item label{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.item{
+  display: flex;
+  border: none;
+  background-color: #f0f0f0;
+  padding-bottom: 30px;
+}
+.item input[type="checkbox"]:checked + label {
+  background-color: lightblue;
+}
 
+/* Enlarge the checkbox */
+.item input[type="checkbox"] {
+  transform: scale(1.5); /* You can adjust the scale factor as needed */
+}
 .items button{
-  background-color: #007bff;
+  position: fixed;
+  background-color: #00ffae;
   color: white;
   padding: 10px 20px;
+  left: 0; /* Move button to the left side of the page */
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -46,7 +65,7 @@ p {
   border-radius: 20px;
   cursor: pointer;
 }
-.items .my-button-transition {
+.items.my-button-transition.my-button-transition {
   background-color: lightblue;
   color: white;
   padding: 10px 20px;
@@ -56,5 +75,34 @@ p {
   transition: background-color 0.3s ease;
 
 }
-/*i added a new file to ensure that this is working fine"
+/* Amélioration du CSS pour la classe .Addform */
+.Addform {
+  display: flex;
+  align-items: center; /* Alignement vertical des éléments */
+}
 
+.Addform input {
+  height: 46px;
+  width: 90vw;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.Addform label{
+  height: 50px;
+  width: 200px;
+  font-size: 1.5rem;
+}
+.Addform button {
+  height: 50px;
+  width: 200px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background-color: #00ffae; /* Couleur de fond par défaut */
+  cursor: pointer; /* Afficher un curseur de type pointer au survol */
+  transition: background-color 0.3s; /* Transition douce pour la couleur de fond */
+}
+
+.Addform button:hover {
+  background-color: red; /* Couleur de fond au survol */
+}
