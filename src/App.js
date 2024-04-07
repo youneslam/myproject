@@ -1,28 +1,14 @@
 import React, { useState } from 'react';
+import SearchItem from './SearchItem';
 import Header from "./header";
 import Content from './Content';
 import Footer from './Footer';
 import Additem from './Additem';
 
 function App() {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      checked: false,
-      item: "item1"
-    },
-    {
-      id: 2,
-      checked: false,
-      item: "item2"
-    },
-    {
-      id: 3,
-      checked: false,
-      item: "item3"
-    }
-  ]);
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglists')));
   const [newitem,setNewitem]=useState('')
+  const[search,setSearch]=useState('')
   
   const additem = (item) => {
     if (!item) return; // Vérifie si l'élément est défini
@@ -69,8 +55,12 @@ function App() {
         setNewitem={setNewitem}
         handlesubmit={handlesubmit}
       />
+      <SearchItem
+        search={search}
+        setSearch={setSearch}/>
       <Content
-        items={items}
+        items={items.filter(item=>((item.item).toLowerCase()).includes
+          (search.toLowerCase()))}
         onhandlechange={onhandlechange}
         ondelete={ondelete}
       />

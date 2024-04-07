@@ -13,7 +13,7 @@ footer {
 
 p {
   color: #333;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -106,3 +106,50 @@ p {
 .Addform button:hover {
   background-color: red; /* Couleur de fond au survol */
 }
+/* Ajout du CSS pour le composant SearchItem */
+
+.searchform {
+  background-color: rgba(0, 0, 0, 0.54);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 20px; /* Ajout d'une marge inférieure pour l'espace */
+}
+
+.searchform label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.searchform input[type="text"] {
+  height: 46px;
+  width: 90vw;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background-color: #f0f0f0; /* Couleur de fond */
+  color: #333; /* Couleur du texte */
+  padding: 0 10px; /* Ajout de rembourrage */
+  margin-bottom: 20px; /* Ajout d'une marge inférieure pour l'espace */
+}
+
+.searchform input[type="text"]:focus {
+  outline: none; /* Suppression de l'encadrement lorsqu'il est focus */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre lorsque l'élément est focus */
+}
+
+.searchform button {
+  height: 50px;
+  width: 200px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background-color: #00ffae; /* Couleur de fond par défaut */
+  cursor: pointer; /* Afficher un curseur de type pointer au survol */
+  transition: background-color 0.3s; /* Transition douce pour la couleur de fond */
+}
+
+.searchform button:hover {
+  background-color: red; /* Couleur de fond au survol */
+}
+
