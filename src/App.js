@@ -23,6 +23,19 @@ function App() {
     }
   ]);
   const [newitem,setNewitem]=useState('')
+  
+  const additem = (item) => {
+    if (!item) return; // Vérifie si l'élément est défini
+    const id = items.length ? items[items.length - 1].id + 1 : 1;
+    const newItem = { id, checked: false, item };
+    const updatedItems = [...items, newItem];
+    setItems(updatedItems);
+    localStorage.setItem("shoppinglists", JSON.stringify(updatedItems));
+    setNewitem(''); // Réinitialise newitem à une chaîne vide
+  }
+  
+  
+  
 
   const onhandlechange = (id) => {
     const updatedItems = items.map(item => {
@@ -41,8 +54,11 @@ function App() {
     setItems(updatedItems);
     localStorage.setItem("shoppinglists", JSON.stringify(updatedItems));
   }
-  const handlesubmit=(e)=>{
-    console.log("submitted")
+
+  const handlesubmit = (e) => {
+    e.preventDefault();
+    additem(newitem);
+    setNewitem('');
   }
   
   return (
@@ -52,7 +68,7 @@ function App() {
         newitem={newitem}
         setNewitem={setNewitem}
         handlesubmit={handlesubmit}
-        />
+      />
       <Content
         items={items}
         onhandlechange={onhandlechange}
@@ -64,4 +80,5 @@ function App() {
 }
 
 export default App;
+
 

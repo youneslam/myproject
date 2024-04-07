@@ -1,5 +1,5 @@
 import React from 'react';
-import Liineitem from './Liineitem'; // Utilisez la casse appropriée
+import Liineitem from './Liineitem'; // Corrected casing
 
 const Itemlis = ({ items, onhandlechange, ondelete }) => {
   return (
@@ -17,3 +17,4 @@ const Itemlis = ({ items, onhandlechange, ondelete }) => {
 };
 
 export default Itemlis;
+
